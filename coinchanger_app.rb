@@ -40,3 +40,12 @@ def plural_hash(coins)
 	}
 	return coin_plural
 end
+
+def hash_to_string(cents)
+	string = ""
+	plural_hash(coinchanger_app(cents)).each do |key, value|
+	# coinchanger_app(cents).each do 
+		string << "#{value} #{key}"
+	end
+	return string
+end

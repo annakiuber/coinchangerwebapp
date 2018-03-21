@@ -14,7 +14,7 @@ end
 
 get "/number" do
 	num1 = session[:num1]
-	cents = coinchanger_app(num1)
+	cents = hash_to_string(num1)
 	erb :page_2, locals:{num1: num1, cents:cents}
 end
 
